@@ -618,7 +618,7 @@ var styled$2 = substyle.defaultStyle(function(_ref2) {
             left -= highlighter.scrollLeft, top -= highlighter.scrollTop;
             var viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0), viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
             left + suggestions.offsetWidth > viewportWidth ? position.left = Math.max(0, viewportWidth - suggestions.offsetWidth) : position.left = left, 
-            top + suggestions.offsetHeight > viewportHeight ? position.top = Math.max(0, viewportHeight - suggestions.offsetHeight - caretHeight) : position.top = top;
+            top + suggestions.offsetHeight + caretHeight > viewportHeight ? position.top = Math.max(0, viewportHeight - suggestions.offsetHeight - caretHeight) : position.top = top;
           } else {
             var _left = caretPosition.left - highlighter.scrollLeft;
             _left + suggestions.offsetWidth > _this.containerRef.offsetWidth ? position.right = 0 : position.left = _left, 

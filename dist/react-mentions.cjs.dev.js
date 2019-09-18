@@ -1252,7 +1252,7 @@ function (_React$Component) {
           position.left = left;
         }
 
-        if (top + suggestions.offsetHeight > viewportHeight) {
+        if (top + suggestions.offsetHeight + caretHeight > viewportHeight) {
           position.top = Math.max(0, viewportHeight - suggestions.offsetHeight - caretHeight);
         } else {
           position.top = top;
